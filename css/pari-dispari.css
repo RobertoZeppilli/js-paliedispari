@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+p {
+    font-size: 2em;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: .2em;
+    padding: 10px;
+    margin-bottom: 1em;
+    color: #fff;
+    background: linear-gradient(-45deg, #334400, #b3b3d3, #5555a8, #333397);
+    border-radius: 10px;
+}
+
+.box {
+    background: radial-gradient(circle at 100%, #335, #339 50%, #eee 75%, #340 75%);
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+span {
+    color: #6b6bb2;
+}
+
+#vincitore {
+    font-size: 2.3em;
+    position: relative;
+}
