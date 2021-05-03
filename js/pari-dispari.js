@@ -46,7 +46,11 @@ var somma = evenOdd(numeroUtente, numeroPc);
 
 document.getElementById("somma").innerHTML = somma;
 
-
+if (somma % 2 == 0) {
+    document.getElementById("risultato").innerHTML = "pari";
+} else {
+    document.getElementById("risultato").innerHTML = "dispari";
+}
 
 // 7. decreto il vincitore
 var check = false;
