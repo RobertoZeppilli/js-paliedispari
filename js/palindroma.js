@@ -6,11 +6,9 @@
 function ePalindroma(par, inv) {
 
     if (par == inv) {
-        console.log(par + " è palindroma");
-        return true;
+        return par + " è palindroma";
     } else {
-        console.log(par + " non è palindroma");
-        return false;
+        return par + " non è palindroma";
     }
 
 }
@@ -20,6 +18,8 @@ var parola = prompt("Inserisci una parola!");
 
 // 2.1 Faccio in modo che la parola inserita dall'utente sia capitalizzata
 parola = parola[0].toUpperCase() + parola.toLowerCase().slice(1);
+
+document.getElementById("parola").innerHTML = parola;
 
 // 3. inizializzo la variabile che conterrà la parola inserita dall'utente ma al contrario.
 var parolaInversa;
@@ -35,8 +35,11 @@ var parolaInversa = arrayInverso.join('');
 
 // 7. Faccio in modo che anche la parolaInversa sia capitalizzata
 parolaInversa = parolaInversa[0].toUpperCase() + parolaInversa.toLowerCase().slice(1);
+document.getElementById("inversa").innerHTML = parolaInversa;
+
 // 8. chiamo la funzione "ePalindroma" creata in precedenza che mi dirà se la parola inserita dall'utente sia o meno palindroma.
 var palindroma = ePalindroma(parola, parolaInversa);
+document.getElementById("pal").innerHTML = palindroma;
 
 
 
