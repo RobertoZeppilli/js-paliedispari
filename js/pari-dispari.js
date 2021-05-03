@@ -19,26 +19,33 @@ function evenOdd(num1, num2) {
     }
 }
 
-// 3. chiedo all'utente di scegliere pari o dispari
-var sceltaUtente = prompt("Scegli pari o dispari!");
-document.getElementById("pari-dispari").innerHTML = sceltaUtente
-// console.log("Hai scelto: " + sceltaUtente);
+// 3. chiedo all'utente di scegliere pari o dispari, e solo quelli!
+do {
 
-// 4. poi chiedo all'utente di scegliere un numero compreso tra 1 e 5
-var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5!"));
-document.getElementById("numero-utente").innerHTML = numeroUtente
-// console.log("Il tuo numero:", numeroUtente);
+    var sceltaUtente = prompt("Scegli pari o dispari!").toLowerCase();
+    document.getElementById("pari-dispari").innerHTML = sceltaUtente
+
+} while (sceltaUtente != "pari" && sceltaUtente != "dispari");
+
+// 4. poi chiedo all'utente di scegliere un numero compreso tra 1 e 5, e solo tra quelli!
+do {
+
+    var numeroUtente = parseInt(prompt("Inserisci un numero da 1 a 5!"));
+    document.getElementById("numero-utente").innerHTML = numeroUtente
+
+} while (numeroUtente < 1 || numeroUtente > 5);
+
 
 // 5. creo una variabile in cui chiamo la funzione numeroRandom() inserendo come argomenti 1 e 5
 var numeroPc = numeroRandom(1, 5);
 document.getElementById("numero-pc").innerHTML = numeroPc;
-// console.log("Il numero del pc:", numeroPc);
+
 
 // // 6. stabilisco la somma tra i due numeri, e se quella somma sia pari o dispari
 var somma = evenOdd(numeroUtente, numeroPc);
-// console.log(somma);
+
 document.getElementById("somma").innerHTML = somma;
-// console.log("La somma dei due numeri è:", somma);
+
 
 
 // 7. decreto il vincitore
@@ -51,11 +58,11 @@ if (sceltaUtente == "pari" && somma % 2 == 0 || sceltaUtente == "dispari" && som
 if (check == true) {
     document.getElementById("vincitore").innerHTML = "Hai vinto!";
     document.getElementById("vincitore").style.color = "green";
-    // console.log("Hai vinto!");
+
 } else {
     document.getElementById("vincitore").innerHTML = "Hai perso!";
     document.getElementById("vincitore").style.color = "red";
-    // console.log("Hai perso!");
+
 }
 
 
